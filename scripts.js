@@ -18,6 +18,9 @@ function grids(gridSize) {
       defCells.style.height = `${cellSize}px`;
       defCells.style.width = `${cellSize}px`;
       newGridFragment.appendChild(defCells);
+      defCells.addEventListener('mouseover', function(e) {
+      e.target.style.backgroundColor = getRandomColor();
+            });
     }
     
 }
@@ -32,3 +35,13 @@ const newGridSize = prompt("Enter a number for your grids (between 1 and 100):)"
     }
     grids(newGridSize);
 });
+
+function getRandomColor(){
+    const randCode = '012456789ABCDEF';
+    let color = '#';
+    for(let i = 0 ; i<6 ; i++){
+        color += randCode[Math.floor(Math.random() *16)];
+
+    }
+return color;
+}
