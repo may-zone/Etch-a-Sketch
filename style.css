@@ -10,8 +10,8 @@ body{
 
 .container{
     background-color: royalblue;
-    width: 20vw;
-    height: 20vw;
+    width: 25vw;
+    height: 25vw;
     display :flex ; 
     flex-wrap: wrap;
     box-sizing: border-box;
